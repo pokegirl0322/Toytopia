@@ -7,6 +7,7 @@ public class BeYourMessengerSelf : MonoBehaviour
 {
     public int speed = 10;
     public GameObject scrollview;
+    public GameObject panel;
     public bool onetime = false;
     // Start is called before the first frame update
     void Start()
@@ -30,20 +31,24 @@ public class BeYourMessengerSelf : MonoBehaviour
         {
             if (onetime == false){
                 Debug.Log("hi how's life - chichi");
-                EnableCanvas();
+                StartDialogueAlready();
                 onetime = true;
             }
         }
     }
-
-    void EnableCanvas()
+    void StartDialogueAlready()
     {
+        panel.SetActive(true);
+    }
+    public void EnableCanvas()
+    {
+        panel.SetActive(false);
         scrollview.SetActive(true);
     }
 
     public void DisableCanvas()
     {
         scrollview.SetActive(false);
-        SceneManager.LoadScene("Map");
+        SceneManager.LoadScene("TestScene");
     }
 }
