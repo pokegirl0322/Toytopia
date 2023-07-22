@@ -1,3 +1,3 @@
 # Toytopia
 
-Hey yall. This is the randomest game you'll ever come across :)
+This document will be updated ONLY when im completely done with whatever this project will turn into .
